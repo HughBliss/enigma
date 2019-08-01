@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:700&display=swap");
 
-@mixin fontCode ($color,$size) {
-  font-family: 'Source Code Pro', monospace;
+@mixin fontCode($color, $size) {
+  font-family: "Source Code Pro", monospace;
   text-transform: uppercase;
   font-size: $size;
   color: $color;
