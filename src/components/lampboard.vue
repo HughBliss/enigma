@@ -1,8 +1,8 @@
 <template>
-  <div class="keyboard">
-    <div class="keyboard__row" v-for="row in kb" v-bind:key="row.id">
+  <div class="lampboard">
+    <div class="lampboard__row" v-for="row in lb" v-bind:key="row.id">
       <div
-        class="keyboard__key"
+        class="lampboard__key"
         v-for="key in row"
         v-bind:key="key.id"
         v-bind:class="key.class"
@@ -14,12 +14,12 @@
 
 <script>
 export default {
-  name: "keyboard",
+  name: "lampboard",
   props: {
     msg: String
   },
   data: () => ({
-    kb: [
+    lb: [
       [
         { key: "q", class: "" },
         { key: "w", class: "" },
@@ -57,33 +57,14 @@ export default {
   methods: {
     log(e) {
       console.log(e);
-    },
-    keyPress(e) {
-      this.kb.forEach(row => {
-        row.forEach(key => {
-          if (key.key == e.key) {
-            key.class = "keyboard__key--click";
-            setTimeout(() => {
-              key.class = "";
-            }, 200);
-          }
-        });
-      });
     }
-  },
-
-  mounted() {
-    let self = this;
-
-    window.addEventListener("keypress", e => {
-      self.keyPress(e);
-    });
   }
 };
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.keyboard {
+.lampboard {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -95,19 +76,21 @@ export default {
   &__key {
     height: 40px;
     width: 40px;
-    background: $dark;
+    background: $light;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 8px;
     cursor: pointer;
-    @include fontCode($white, 30px);
+    @include fontCode($black, 30px);
     &--click {
-      background: $primary;
+      background: $white;
+      box-shadow: 0 0 25px $white;
     }
     &:active {
-      background: $primary;
+      box-shadow: 0 0 25px $white;
+      background: $white;
     }
   }
 }

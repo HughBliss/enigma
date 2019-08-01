@@ -1,26 +1,43 @@
 <template>
   <div class="chatbox">
     <div class="chatbox-wrapper">
-      <div class="chatbox__message chatbox__message--enigma">kjvke, weravc</div>
+      <!-- <div class="chatbox__message chatbox__message--enigma">kjvke, weravc</div>
       <div class="chatbox__message">hello, enigma</div>
       <div class="chatbox__message chatbox__message--enigma">kjvke, weravc</div>
       <div class="chatbox__message">hello, enigma</div>
-      <div class="chatbox__message chatbox__message--enigma">kjvke, weravc</div>
-      <div class="chatbox__message">hello, enigma</div>
+      <div
+        class="chatbox__message chatbox__message--enigma"
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nostrum earum omnis harum dolorem labore quo architecto neque quae adipisci, autem, incidunt consequuntur molestiae suscipit aperiam necessitatibus illum blanditiis tempore?</div>
+      <div
+        class="chatbox__message"
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nostrum earum omnis harum dolorem labore quo architecto neque quae adipisci, autem, incidunt consequuntur molestiae suscipit aperiam necessitatibus illum blanditiis tempore?</div>-->
     </div>
-    <input type="text" class="chatbox__input" />
+    <input type="text" class="chatbox__input" v-model="input" />
   </div>
 </template>
 <script>
 export default {
-  name: "chatbox"
+  name: "chatbox",
+  data: () => ({
+    input: ""
+  }),
+  methods: {
+    inputChange() {
+      this.$store.dispatch("watchInput", this.input);
+    },
+    onKeydown(e) {
+      if (e.key.length == 1) this.input += e.key;
+      console.log(e.key.length);
+    }
+  }
 };
 </script>
+
+
 <style lang="scss">
 .chatbox {
   margin: auto;
-  margin-top: 50px;
-  width: 500px;
+  width: 504px;
   display: flex;
   flex-direction: column;
   &-wrapper {
@@ -37,7 +54,6 @@ export default {
     background: $dark;
     @include fontCode($white, 14px);
     border-radius: 20px;
-    text-align: right;
     padding: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -55,6 +71,7 @@ export default {
     outline: none;
     border: none;
     width: calc(100% - 40px);
+    text-align: right;
   }
 }
 </style>
