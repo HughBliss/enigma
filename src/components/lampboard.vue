@@ -57,7 +57,27 @@ export default {
   methods: {
     log(e) {
       console.log(e);
+    },
+    keyPress(e) {
+      this.lb.forEach(row => {
+        row.forEach(key => {
+          if (key.key == e.key) {
+            key.class = "lampboard__key--click";
+            setTimeout(() => {
+              key.class = "";
+            }, 200);
+          }
+        });
+      });
     }
+  },
+
+  mounted() {
+    let self = this;
+
+    window.addEventListener("keypress", e => {
+      self.keyPress(e);
+    });
   }
 };
 </script>
@@ -69,6 +89,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  user-select: none;
   &__row {
     display: flex;
     flex-direction: row;
