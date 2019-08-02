@@ -7,6 +7,7 @@
     </div>
     <div class="col">
       <select-type></select-type>
+      <rotors></rotors>
     </div>
   </div>
 </template>
@@ -17,6 +18,7 @@ import keyboard from "@/components/keyboard.vue";
 import lampboard from "@/components/lampboard.vue";
 import chatbox from "@/components/chatbox.vue";
 import selectType from "@/components/selectTypeTool.vue";
+import rotors from "@/components/rotorsTool.vue";
 
 export default {
   name: "home",
@@ -24,7 +26,8 @@ export default {
     keyboard,
     chatbox,
     lampboard,
-    selectType
+    selectType,
+    rotors
   }
 };
 </script>
