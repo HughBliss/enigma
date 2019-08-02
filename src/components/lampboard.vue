@@ -85,6 +85,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .lampboard {
+  width: 504px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;

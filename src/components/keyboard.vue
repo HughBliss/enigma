@@ -84,6 +84,7 @@ export default {
 
 <style scoped lang="scss">
 .keyboard {
+  width: 504px;
   user-select: none;
   margin-top: 20px;
   display: flex;
