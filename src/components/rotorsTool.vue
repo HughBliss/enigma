@@ -5,7 +5,7 @@
       <div class="rotors-rotor__wheel">
         <span class="rotors-rotor__key">1</span>
         <span class="rotors-rotor__key">0</span>
-        <span class="rotors-rotor__key">26</span>
+        <span class="rotors-rotor__key rotors-rotor__key--activ">26</span>
         <span class="rotors-rotor__key">25</span>
         <span class="rotors-rotor__key">24</span>
       </div>
@@ -61,19 +61,26 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
+      // background: $dark;
+      // margin: 15px;
+      // border-radius: 40%;
     }
     &__key {
-      @include fontCode($white, 14px);
+      @include fontCode($primary, 14px);
 
-      background: $dark;
+      background: $white;
       width: 30px;
       height: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-bottom: 1px solid $white;
+      border-bottom: 1px solid $dark;
+
       &:last-child {
         border: none;
+      }
+      &--activ {
+        color: $black;
       }
     }
   }

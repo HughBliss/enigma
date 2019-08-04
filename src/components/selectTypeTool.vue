@@ -10,7 +10,7 @@ export default {
 
 <style lang="scss">
 .select-type {
-  background: $white;
+  background: $black;
   width: 200px;
   height: 200px;
 }

@@ -1,16 +1,24 @@
 <template>
   <div class="chatbox">
     <div class="chatbox-wrapper">
-      <!-- <div class="chatbox__message chatbox__message--enigma">kjvke, weravc</div>
-      <div class="chatbox__message">hello, enigma</div>
-      <div class="chatbox__message chatbox__message--enigma">kjvke, weravc</div>
-      <div class="chatbox__message">hello, enigma</div>
       <div
         class="chatbox__message chatbox__message--enigma"
       >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nostrum earum omnis harum dolorem labore quo architecto neque quae adipisci, autem, incidunt consequuntur molestiae suscipit aperiam necessitatibus illum blanditiis tempore?</div>
       <div
         class="chatbox__message"
-      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nostrum earum omnis harum dolorem labore quo architecto neque quae adipisci, autem, incidunt consequuntur molestiae suscipit aperiam necessitatibus illum blanditiis tempore?</div>-->
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nostrum earum omnis harum dolorem labore quo architecto neque quae adipisci, autem, incidunt consequuntur molestiae suscipit aperiam necessitatibus illum blanditiis tempore?</div>
+      <div
+        class="chatbox__message chatbox__message--enigma"
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nostrum earum omnis harum dolorem labore quo architecto neque quae adipisci, autem, incidunt consequuntur molestiae suscipit aperiam necessitatibus illum blanditiis tempore?</div>
+      <div
+        class="chatbox__message"
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nostrum earum omnis harum dolorem labore quo architecto neque quae adipisci, autem, incidunt consequuntur molestiae suscipit aperiam necessitatibus illum blanditiis tempore?</div>
+      <div
+        class="chatbox__message chatbox__message--enigma"
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nostrum earum omnis harum dolorem labore quo architecto neque quae adipisci, autem, incidunt consequuntur molestiae suscipit aperiam necessitatibus illum blanditiis tempore?</div>
+      <div
+        class="chatbox__message"
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nostrum earum omnis harum dolorem labore quo architecto neque quae adipisci, autem, incidunt consequuntur molestiae suscipit aperiam necessitatibus illum blanditiis tempore?</div>
     </div>
     <input type="text" class="chatbox__input" v-model="input" />
   </div>
@@ -44,7 +52,7 @@ export default {
     display: flex;
     width: 100%;
     flex-direction: column;
-    height: 200px;
+    height: 400px;
     overflow-y: scroll;
   }
   &__message,
