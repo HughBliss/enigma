@@ -12,50 +12,34 @@
 
 ### Установка интерфейса командной строки Vue:
 
-```
-$ yarn global add @vue/cli
-```
+`$ yarn global add @vue/cli`
 
 или
 
-```
-$ npm i @vue/cli -g
-```
+`$ npm i @vue/cli -g`
 
 ### Установка зависимостей проекта:
 
-```
-$ yarn install
-```
+`$ yarn install`
 
 или
 
-```
-$ npn i
-```
+`$ npn i`
 
 ### Запустить сервер для локальной разработки:
 
-```
-$ yarn serve
-```
+`$ yarn serve`
 
 или
 
-```
-$ npm run serve
-```
+`$ npm run serve`
 
 ## Собрать проект для публикации:
 
 Собирает исходники и зависимости в минифицированые js/css файлы в папку dist в корень проекта.
 
-```
-$ yarn build
-```
+`$ yarn build`
 
 или
 
-```
-$ npm run build
-```
+`$ npm run build`
