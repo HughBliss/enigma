@@ -35,11 +35,13 @@
 
 <script>
 export default {
-  name: "rotors"
-};
+  name: 'rotors'
+}
 </script>
 
 <style lang="scss">
+@import "../assets/scss/fonts";
+@import "../assets/scss/variables";
 .rotors {
   display: flex;
   &-rotor {

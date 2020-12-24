@@ -25,24 +25,26 @@
 </template>
 <script>
 export default {
-  name: "chatbox",
+  name: 'chatbox',
   data: () => ({
-    input: ""
+    input: ''
   }),
   methods: {
-    inputChange() {
-      this.$store.dispatch("watchInput", this.input);
+    inputChange () {
+      this.$store.dispatch('watchInput', this.input)
     },
-    onKeydown(e) {
-      if (e.key.length == 1) this.input += e.key;
-      console.log(e.key.length);
+    onKeydown (e) {
+      if (e.key.length === 1) this.input += e.key
+      console.log(e.key.length)
     }
   }
-};
+}
 </script>
 
-
 <style lang="scss">
+@import "../assets/scss/variables";
+@import "../assets/scss/fonts";
+
 .chatbox {
   margin: auto;
   width: 504px;

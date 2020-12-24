@@ -7,82 +7,86 @@
         v-bind:key="key.id"
         v-bind:class="key.class"
         @click="log(key)"
-      >{{key.key}}</div>
+      >
+        {{ key.key }}
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "keyboard",
+  name: 'keyboard',
   props: {
     msg: String
   },
   data: () => ({
     kb: [
       [
-        { key: "q", class: "" },
-        { key: "w", class: "" },
-        { key: "e", class: "" },
-        { key: "r", class: "" },
-        { key: "t", class: "" },
-        { key: "z", class: "" },
-        { key: "u", class: "" },
-        { key: "i", class: "" },
-        { key: "o", class: "" }
+        { key: 'q', class: '' },
+        { key: 'w', class: '' },
+        { key: 'e', class: '' },
+        { key: 'r', class: '' },
+        { key: 't', class: '' },
+        { key: 'z', class: '' },
+        { key: 'u', class: '' },
+        { key: 'i', class: '' },
+        { key: 'o', class: '' }
       ],
       [
-        { key: "a", class: "" },
-        { key: "s", class: "" },
-        { key: "d", class: "" },
-        { key: "f", class: "" },
-        { key: "g", class: "" },
-        { key: "h", class: "" },
-        { key: "j", class: "" },
-        { key: "k", class: "" }
+        { key: 'a', class: '' },
+        { key: 's', class: '' },
+        { key: 'd', class: '' },
+        { key: 'f', class: '' },
+        { key: 'g', class: '' },
+        { key: 'h', class: '' },
+        { key: 'j', class: '' },
+        { key: 'k', class: '' }
       ],
       [
-        { key: "p", class: "" },
-        { key: "y", class: "" },
-        { key: "x", class: "" },
-        { key: "c", class: "" },
-        { key: "v", class: "" },
-        { key: "b", class: "" },
-        { key: "n", class: "" },
-        { key: "m", class: "" },
-        { key: "l", class: "" }
+        { key: 'p', class: '' },
+        { key: 'y', class: '' },
+        { key: 'x', class: '' },
+        { key: 'c', class: '' },
+        { key: 'v', class: '' },
+        { key: 'b', class: '' },
+        { key: 'n', class: '' },
+        { key: 'm', class: '' },
+        { key: 'l', class: '' }
       ]
     ]
   }),
   methods: {
-    log(e) {
-      console.log(e);
+    log (e) {
+      console.log(e)
     },
-    keyPress(e) {
-      this.kb.forEach(row => {
-        row.forEach(key => {
-          if (key.key == e.key) {
-            key.class = "keyboard__key--click";
+    keyPress (e) {
+      this.kb.forEach((row) => {
+        row.forEach((key) => {
+          if (key.key === e.key) {
+            key.class = 'keyboard__key--click'
             setTimeout(() => {
-              key.class = "";
-            }, 200);
+              key.class = ''
+            }, 200)
           }
-        });
-      });
+        })
+      })
     }
   },
 
-  mounted() {
-    let self = this;
+  mounted () {
+    const self = this
 
-    window.addEventListener("keypress", e => {
-      self.keyPress(e);
-    });
+    window.addEventListener('keypress', (e) => {
+      self.keyPress(e)
+    })
   }
-};
+}
 </script>
 
 <style scoped lang="scss">
+@import "../assets/scss/variables";
+@import "../assets/scss/fonts";
 .keyboard {
   width: 504px;
   user-select: none;

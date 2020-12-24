@@ -4,11 +4,12 @@
 
 <script>
 export default {
-  name: "select-type"
-};
+  name: 'select-type'
+}
 </script>
 
 <style lang="scss">
+@import "../assets/scss/variables";
 .select-type {
   background: $black;
   width: 200px;

@@ -13,15 +13,14 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import keyboard from "@/components/keyboard.vue";
-import lampboard from "@/components/lampboard.vue";
-import chatbox from "@/components/chatbox.vue";
-import selectType from "@/components/selectTypeTool.vue";
-import rotors from "@/components/rotorsTool.vue";
+import keyboard from '@/components/keyboard.vue'
+import lampboard from '@/components/lampboard.vue'
+import chatbox from '@/components/chatbox.vue'
+import selectType from '@/components/selectTypeTool.vue'
+import rotors from '@/components/rotorsTool.vue'
 
 export default {
-  name: "home",
+  name: 'home',
   components: {
     keyboard,
     chatbox,
@@ -29,8 +28,9 @@ export default {
     selectType,
     rotors
   }
-};
+}
 </script>
+
 <style lang="scss">
 .row {
   display: flex;
